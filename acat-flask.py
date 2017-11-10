@@ -124,8 +124,10 @@ classifier.fit(x = training_set.data, y = training_set.target, steps = 2000)
 def get_accuracy_score():
     accuracy_score = classifier.evaluate(x = test_set.data, y = test_set.target)["accuracy"]
     print("Accuracy : {0:f}".format(accuracy_score))
-    test = pd.read_csv('topredict.csv', usecols = headers)
     return ("Accuracy : {0:f}".format(accuracy_score))
+
+test = pd.read_csv('topredict.csv', usecols = headers)
+    
 for f in headers:
     test[f] = test[f].astype('category')
     test[f].cat.set_categories(categories[f],inplace=True)
