@@ -134,4 +134,6 @@ def get_predictions():
     y = list(classifier.predict(new_test, as_iterable=True))
     print('Predictions: {}'.format(str(y)))
     print(df_labels[y])
-    return str(df_labels[y]) 
+    return str(df_labels[y])
+if __name__ == "__main__":
+        app.run(host='0.0.0.0')
