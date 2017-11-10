@@ -8,6 +8,9 @@ import tempfile
 import collections
 from sklearn.cross_validation import train_test_split
 from sklearn.metrics import accuracy_score
+
+app = Flask(__name__)
+
 headers = ['business_classification', 'business_impact', 'business_relevance',
        'category_id', 'data_confidentiality', 'eoldriver', 'extensibility',
        'geographical_scope', 'has_dependencies', 'id', 'io_intensity',
