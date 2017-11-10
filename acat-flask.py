@@ -1,5 +1,4 @@
 # import all required libraries
-from app import app
 from flask import Flask
 import tensorflow as tf
 import pandas as pd
